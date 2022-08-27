@@ -4,3 +4,25 @@ logging:
       springframework:
         web: INFO
     root: INFO
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: info, health, metrics, loggers, prometheus
+  endpoint:
+    health:
+      show-details: always
+  metrics:
+    enable:
+      application: false
+      disk: false
+      executor: false
+      http: false
+      jvm: false
+      logback: false
+      process:
+        files: false
+      system:
+        cpu:
+          count: false
