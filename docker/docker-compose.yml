@@ -7,7 +7,7 @@ services:
     volumes:
     - ".././src/main/resources/prometheus.yml:/etc/prometheus/prometheus.yml"
     command: "--config.file=/etc/prometheus/prometheus.yml"
-#    uncomment this to set ports
+#    comment this to set ports
     network_mode: "host"
 #    ports:
 #    - "9090:9090"
@@ -18,7 +18,7 @@ services:
     container_name: grafana
     volumes:
       - "./volumes/grafana:/var/lib/grafana"
-#    uncomment this to set ports
+#    comment this to set ports
     network_mode: "host"
 #    ports:
 #      - "3000:3000"
